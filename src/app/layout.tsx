@@ -15,8 +15,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Global Oil Tank Farms | Leading Energy Storage Solutions',
-  description: 'Global Oil Tank Farms provides safe, reliable, and efficient oil storage solutions with a commitment to sustainability and innovation.',
+  title: 'Kopak Oil Tank Farms | Leading Energy Storage Solutions',
+  description: 'Kopak Oil Tank Farms provides safe, reliable, and efficient oil storage solutions with a commitment to sustainability and innovation.',
   keywords: 'oil storage, tank farm, petroleum, energy solutions, fuel storage',
 };
 

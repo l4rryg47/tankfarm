@@ -32,9 +32,9 @@ const navigation = {
       href: 'tel:+18001234567'
     },
     { 
-      name: 'info@globaltankfarms.com',
+      name: 'info@kopakoiltankfarms.com',
       icon: <FaEnvelope className="h-5 w-5 text-primary-500" />,
-      href: 'mailto:info@globaltankfarms.com'
+      href: 'mailto:info@kopakoiltankfarms.com'
     },
   ],
   social: [
@@ -68,8 +68,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-primary-400">Global</span>
-              <span className="text-2xl font-bold text-white">TankFarms</span>
+              <span className="text-2xl font-bold text-primary-400">Kopak Oil </span>
+              <span className="text-2xl font-bold text-white">Tank Farms</span>
             </div>
             <p className="mt-4 text-sm text-gray-300">
               Leading the way in safe, reliable, and efficient oil storage solutions. 
@@ -137,7 +137,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="mt-8 text-sm text-gray-400 md:order-1 md:mt-0">
-              &copy; {new Date().getFullYear()} Global Tank Farms. All rights reserved.
+              &copy; {new Date().getFullYear()} Kopak Oil Tank Farms. All rights reserved.
             </p>
           </div>
         </div>

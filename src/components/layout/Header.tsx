@@ -39,8 +39,8 @@ export default function Header() {
           <div className="flex items-center
           ">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary-700">Global</span>
-              <span className="text-2xl font-bold text-gray-900">TankFarms</span>
+              <span className="text-2xl font-bold text-primary-700">Kopak Oil </span>
+              <span className="text-2xl font-bold text-gray-900">Tank Farms</span>
             </Link>
           </div>
 
@@ -88,8 +88,8 @@ export default function Header() {
           <div className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
             <div className="flex h-16 items-center justify-between px-4">
               <Link href="/" className="flex items-center">
-                <span className="text-2xl font-bold text-primary-700">Global</span>
-                <span className="text-2xl font-bold text-gray-900">TankFarms</span>
+                <span className="text-2xl font-bold text-primary-700">Kopak Oil </span>
+                <span className="text-2xl font-bold text-gray-900">Tank Farms</span>
               </Link>
               <button
                 type="button"
