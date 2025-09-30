@@ -36,11 +36,17 @@ export default function Header() {
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center
-          ">
-            <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary-700">Kopak Oil </span>
-              <span className="text-2xl font-bold text-gray-900">Tank Farms</span>
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-3">
+              <img 
+                src="/images/kopak-logo.png" 
+                alt="Kopak Petroleum Storage Inc" 
+                className="h-16 w-auto drop-shadow-md"
+              />
+              <div>
+                <span className="text-2xl font-bold text-primary-700">Kopac Petroleum </span>
+                <span className="text-2xl font-bold text-gray-900">Storage Inc</span>
+              </div>
             </Link>
           </div>
 

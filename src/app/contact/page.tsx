@@ -70,21 +70,33 @@ export default function ContactPage() {
     }
   };
 
-  const contactInfo = [
+  const terminals = [
     {
-      title: 'Visit Us',
-      description: '123 Energy Way, Houston, TX 77001',
-      icon: <MapPinIcon className="h-6 w-6 text-primary-600" />,
+      name: 'NETHERLAND TERMINAL',
+      address: 'Moezelweg 75 3198 LS Europoort Rotterdam',
+      gps: 'LATITUDE 51.9145288 LONGITUDE 4.1956198',
+      port: '5530',
+      country: 'The Netherlands',
+      phone: '+3197005030859',
+      email: 'kopakstorage.rotterdam@kopakoiltank.com',
     },
     {
-      title: 'Call Us',
-      description: '+1 (800) 123-4567',
-      icon: <PhoneIcon className="h-6 w-6 text-primary-600" />,
+      name: 'USA TERMINAL',
+      address: 'Bayport Industrial Complex 11666 Port Road Seabrook, Texas 77586 USA',
+      gps: 'LATITUDE 29.6169112 LONGITUDE -95.0371099',
+      port: '9278',
+      country: 'USA',
+      phone: '+1(585) 285-4634',
+      email: 'kopakstorage.houston@kopakoiltank.com',
     },
     {
-      title: 'Email Us',
-      description: 'info@globaltankfarms.com',
-      icon: <EnvelopeIcon className="h-6 w-6 text-primary-600" />,
+      name: 'SINGAPORE TERMINAL',
+      address: '61 Meranti Crescent Jurong Island Singapore 627807',
+      gps: 'LATITUDE 1.238895 LONGITUDE 103.6830461',
+      port: '',
+      country: 'Singapore',
+      phone: '+6581504031',
+      email: 'kopakstorage.jurong@kopakoiltank.com',
     },
   ];
 
@@ -116,21 +128,35 @@ export default function ContactPage() {
                   Our friendly team would love to hear from you.
                 </p>
                 
-                <dl className="mt-8 space-y-6">
-                  {contactInfo.map((item, index) => (
-                    <div key={index} className="flex">
-                      <dt className="flex-shrink-0">
-                        <div className="flex items-center justify-center h-10 w-10 rounded-md bg-primary-500 text-white">
-                          {item.icon}
+                <div className="mt-8 space-y-6">
+                  <h3 className="text-lg font-medium text-gray-900">Our Terminals</h3>
+                  <div className="space-y-4">
+                    {terminals.map((terminal, index) => (
+                      <div key={index} className="border-l-4 border-primary-500 pl-4 py-2">
+                        <h4 className="font-medium text-gray-900">{terminal.name}</h4>
+                        <div className="mt-1 text-sm text-gray-600">
+                          <p>{terminal.address}</p>
+                          <p className="mt-1 text-xs text-gray-500">{terminal.gps}</p>
+                          <div className="mt-2 space-y-1">
+                            {terminal.port && <p className="text-sm">Port: {terminal.port}</p>}
+                            <div className="flex items-center">
+                              <PhoneIcon className="h-4 w-4 text-gray-500 mr-2" />
+                              <a href={`tel:${terminal.phone.replace(/\D/g, '')}`} className="text-primary-600 hover:text-primary-500">
+                                {terminal.phone}
+                              </a>
+                            </div>
+                            <div className="flex items-center">
+                              <EnvelopeIcon className="h-4 w-4 text-gray-500 mr-2" />
+                              <a href={`mailto:${terminal.email}`} className="text-primary-600 hover:text-primary-500">
+                                {terminal.email}
+                              </a>
+                            </div>
+                          </div>
                         </div>
-                      </dt>
-                      <dd className="ml-4 text-base text-gray-500">
-                        <div className="font-medium text-gray-900">{item.title}</div>
-                        <div className="mt-1">{item.description}</div>
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
+                      </div>
+                    ))}
+                  </div>
+                </div>
                 
                 <div className="mt-12">
                   <h3 className="text-lg font-medium text-gray-900">Business Hours</h3>
@@ -382,19 +408,50 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Map Section */}
+      {/* Terminals Map Section */}
       <div className="bg-gray-50">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-          <div className="rounded-lg overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.1509333333334!2d-95.36958268489194!3d29.74998298199525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c08af9a6b9a9%3A0x9a1c6b9e6a9b9c9d!2s123%20Energy%20Way%2C%20Houston%2C%20TX%2077001!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              title="Our Location"
-            ></iframe>
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Global Terminals</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {terminals.map((terminal, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+                <div className="h-48 bg-gray-200 relative">
+                  <iframe
+                    src={`https://maps.google.com/maps?q=${terminal.gps.split(' ')[1]},${terminal.gps.split(' ')[3]}&z=12&output=embed`}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    title={`${terminal.name} Location`}
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900">{terminal.name}</h3>
+                  <p className="mt-2 text-sm text-gray-600">{terminal.address}</p>
+                  <div className="mt-4 space-y-2">
+                    <div className="flex items-center text-sm">
+                      <PhoneIcon className="h-4 w-4 text-gray-500 mr-2" />
+                      <a href={`tel:${terminal.phone.replace(/\D/g, '')}`} className="text-primary-600 hover:text-primary-500">
+                        {terminal.phone}
+                      </a>
+                    </div>
+                    <div className="flex items-center text-sm">
+                      <EnvelopeIcon className="h-4 w-4 text-gray-500 mr-2" />
+                      <a href={`mailto:${terminal.email}`} className="text-primary-600 hover:text-primary-500">
+                        {terminal.email}
+                      </a>
+                    </div>
+                    {terminal.port && (
+                      <div className="text-sm text-gray-500">
+                        Port: {terminal.port}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

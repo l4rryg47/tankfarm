@@ -4,15 +4,15 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin,
 const navigation = {
   company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Leadership', href: '/about#leadership' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'News & Media', href: '/news' },
+    { name: 'Services', href: '/services' },
+    { name: 'Terminals', href: '/contact' },
+    { name: 'Contact', href: '/contact' },
   ],
   services: [
-    { name: 'Storage Solutions', href: '/services#storage' },
-    { name: 'Terminal Operations', href: '/services#terminal' },
-    { name: 'Logistics', href: '/services#logistics' },
-    { name: 'Custom Solutions', href: '/services#custom' },
+    { name: 'Storage Solutions', href: '/services' },
+    { name: 'Terminal Operations', href: '/services' },
+    { name: 'Logistics', href: '/services' },
+    { name: 'Custom Solutions', href: '/services' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy-policy' },
@@ -22,19 +22,20 @@ const navigation = {
   ],
   contact: [
     { 
-      name: '123 Energy Way, Houston, TX 77001',
+      name: 'Bayport Industrial Complex 11666 Port Road',
+      name2: 'Seabrook, Texas 77586 USA',
       icon: <FaMapMarkerAlt className="h-5 w-5 text-primary-500" />,
-      href: '#'
+      href: 'https://maps.google.com?q=29.6169112,-95.0371099',
     },
     { 
-      name: '+1 (800) 123-4567',
+      name: '+1 (585) 285-4634',
       icon: <FaPhone className="h-5 w-5 text-primary-500" />,
-      href: 'tel:+18001234567'
+      href: 'tel:+15852854634'
     },
     { 
-      name: 'info@kopakoiltankfarms.com',
+      name: 'kopakstorage.houston@kopakoiltank.com',
       icon: <FaEnvelope className="h-5 w-5 text-primary-500" />,
-      href: 'mailto:info@kopakoiltankfarms.com'
+      href: 'mailto:kopakstorage.houston@kopakoiltank.com'
     },
   ],
   social: [
@@ -68,12 +69,19 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-primary-400">Kopak Oil </span>
-              <span className="text-2xl font-bold text-white">Tank Farms</span>
+              <img 
+                src="/images/kopak-logo.png" 
+                alt="Kopak Petroleum Storage Inc" 
+                className="h-12 w-auto mr-3"
+              />
+              <div>
+                <span className="text-2xl font-bold text-primary-400">Kopac Petroleum </span>
+                <span className="text-2xl font-bold text-white">Storage Inc</span>
+              </div>
             </div>
             <p className="mt-4 text-sm text-gray-300">
-              Leading the way in safe, reliable, and efficient oil storage solutions. 
-              Committed to sustainability and innovation in energy infrastructure.
+              Leading provider of safe and efficient petroleum storage solutions with 
+              state-of-the-art terminal facilities worldwide.
             </p>
             <div className="mt-6 flex space-x-6
             ">
@@ -115,18 +123,38 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Contact Us</h3>
             <ul className="mt-4 space-y-3">
-              {navigation.contact.map((item, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="mr-3 mt-0.5">{item.icon}</span>
-                  <Link href={item.href} className="text-base text-gray-300 hover:text-white">
-                    {item.name}
-                  </Link>
+              {navigation.contact.map((item) => (
+                <li key={item.name} className="space-y-1">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 mt-1">
+                      {item.icon}
+                    </div>
+                    <div className="ml-3">
+                      <Link href={item.href} className="text-base text-gray-300 hover:text-white block">
+                        {item.name}
+                      </Link>
+                      {item.name2 && (
+                        <div className="text-base text-gray-300">
+                          {item.name2}
+                        </div>
+                      )}
+                      {item.gps && (
+                        <div className="text-xs text-gray-400 mt-1">
+                          {item.gps}
+                        </div>
+                      )}
+                      {item.port && (
+                        <div className="text-sm text-gray-300 mt-1">
+                          {item.port}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-
         <div className="mt-12 border-t border-gray-800 pt-8">
           <div className="md:flex md:items-center md:justify-between">
             <div className="flex space-x-6 md:order-2">
