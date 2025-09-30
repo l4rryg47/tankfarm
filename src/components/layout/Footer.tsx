@@ -75,7 +75,7 @@ export default function Footer() {
                 className="h-12 w-auto mr-3"
               />
               <div>
-                <span className="text-2xl font-bold text-primary-400">Kopac Petroleum </span>
+                <span className="text-2xl font-bold text-primary-400">Kopak Petroleum </span>
                 <span className="text-2xl font-bold text-white">Storage Inc</span>
               </div>
             </div>

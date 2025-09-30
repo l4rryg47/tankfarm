@@ -44,7 +44,7 @@ export default function Header() {
                 className="h-16 w-auto drop-shadow-md"
               />
               <div>
-                <span className="text-2xl font-bold text-primary-700">Kopac Petroleum </span>
+                <span className="text-2xl font-bold text-primary-700">Kopak Petroleum </span>
                 <span className="text-2xl font-bold text-gray-900">Storage Inc</span>
               </div>
             </Link>
