@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: 'Kopak Oil Tank Farms | Leading Energy Storage Solutions',
   description: 'Kopak Oil Tank Farms provides safe, reliable, and efficient oil storage solutions with a commitment to sustainability and innovation.',
   keywords: 'oil storage, tank farm, petroleum, energy solutions, fuel storage',
+  icons: {
+    icon: '/images/favicon.ico',
+    apple: '/images/favicon.ico',
+  },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({

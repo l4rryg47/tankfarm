@@ -138,16 +138,6 @@ export default function Footer() {
                           {item.name2}
                         </div>
                       )}
-                      {item.gps && (
-                        <div className="text-xs text-gray-400 mt-1">
-                          {item.gps}
-                        </div>
-                      )}
-                      {item.port && (
-                        <div className="text-sm text-gray-300 mt-1">
-                          {item.port}
-                        </div>
-                      )}
                     </div>
                   </div>
                 </li>
