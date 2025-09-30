@@ -77,7 +77,7 @@ export default function ContactPage() {
       gps: 'LATITUDE 51.9145288 LONGITUDE 4.1956198',
       port: '5530',
       country: 'The Netherlands',
-      phone: '+3197005030859',
+      phone: '+3197005030859 (Whatsapp only)',
       email: 'kopakstorage.rotterdam@kopakoiltank.com',
     },
     {
@@ -93,7 +93,7 @@ export default function ContactPage() {
       name: 'SINGAPORE TERMINAL',
       address: '61 Meranti Crescent Jurong Island Singapore 627807',
       gps: 'LATITUDE 1.238895 LONGITUDE 103.6830461',
-      port: '',
+      port: '7851',
       country: 'Singapore',
       phone: '+6581504031',
       email: 'kopakstorage.jurong@kopakoiltank.com',
